@@ -3,9 +3,8 @@ name: Build Windows exe
 
 on:
   push:
-    tags:
-      - 'v*'           
-  workflow_dispatch:   
+    tags: ['v*']
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -17,10 +16,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: リポジトリをチェックアウト
+      - name: チェックアウト
         uses: actions/checkout@v4
 
-      - name: Python をセットアップ
+      - name: Python セットアップ
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
@@ -39,7 +38,7 @@ jobs:
             main.py
 
       - name: ビルド成果物をアップロード
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v4
         with:
           name: Text_Replacer_v2-windows
           path: dist/Text_Replacer_v2.exe
