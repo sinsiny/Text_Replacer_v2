@@ -79,3 +79,4 @@ tk.Checkbutton(root, text="フォルダー名も置き換える", variable=renam
 tk.Button(root, text="実行", command=execute).grid(row=5, column=0, columnspan=3, padx=5, pady=10)
 
 root.mainloop()
+#keikun is watching you
