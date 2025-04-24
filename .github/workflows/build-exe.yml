@@ -30,12 +30,8 @@ jobs:
           pip install pyinstaller
 
       - name: ビルド
-        run: |
-          pyinstaller \
-            --onefile \
-            --windowed \
-            --name Text_Replacer_v2 \
-            main.py
+        run: pyinstaller --onefile --windowed --name Text_Replacer_v2 main.py
+
 
       - name: ビルド成果物をアップロード
         uses: actions/upload-artifact@v4
