@@ -39,7 +39,7 @@ jobs:
             main.py
 
       - name: ビルド成果物をアップロード
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: Text_Replacer_v2-windows
           path: dist/Text_Replacer_v2.exe
