@@ -7,6 +7,11 @@ on:
       - 'v*'           
   workflow_dispatch:   
 
+permissions:
+  contents: read
+  packages: write
+  actions: read
+
 jobs:
   build-exe:
     runs-on: windows-latest
@@ -34,7 +39,7 @@ jobs:
             main.py
 
       - name: ビルド成果物をアップロード
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: Text_Replacer_v2-windows
           path: dist/Text_Replacer_v2.exe
